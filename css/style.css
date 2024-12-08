@@ -230,13 +230,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
         }
                 .contacts-link {
-                    /* font-weight: 400;
-                    font-size: 16px;
-                    line-height: 1.5;
-                    letter-spacing: 0.02em;
-                    
-                    display: block;
-                    padding: 24px 0; */
+                   
                     padding: 24px 0;
                     font-size: 16px;
                     line-height: 1.5;
@@ -266,10 +260,6 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
         flex-direction: column;
         
-        
-       
-        
-
 
    
 }
@@ -1211,19 +1201,4 @@ transform: translateY(0%);
     }
     
     
-        
-          /* <picture>
-          <source srcset="
-              ./images/portfolio/banking-app.jpg         1x,
-              ./images/portfolio/banking-app-desk@2x.jpg 2x
-            " media="(min-width: 1158px)">
-          <source srcset="
-              ./images/portfolio/banking-app-tab.jpg    1x,
-              ./images/portfolio/banking-app-tab@2x.jpg 2x
-            " media="(min-width: 768px)">
-          <source srcset="
-              ./images/portfolio/banking-app-mob.jpg    1x,
-              ./images/portfolio/banking-app-mob@2x.jpg 2x
-            " media="(max-width: 767px)">
-          <img src="./images/portfolio/banking-app-mob.jpg" alt="Banking App" width="360" height="300">
-        </picture> */
+      
