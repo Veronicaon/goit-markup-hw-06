@@ -89,6 +89,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 
@@ -131,9 +132,10 @@ img {
 @media screen and (min-width:768px) {
     
    .contacts{
-    display: flex;
-    margin-left: 156px;
-     }
+    font-style: normal;
+    display: block;
+
+     } 
         .burger-btn {
                 display: none;
 
@@ -156,11 +158,11 @@ img {
 }
     
 }
-/* .header-logo {
+ .header-logo {
 
-    padding: 24px 0;
-    margin-right: 120px;
-} */
+    padding: 24px 120px 24px 16px;
+    
+} 
 
 .header-nav {
     display: flex;
