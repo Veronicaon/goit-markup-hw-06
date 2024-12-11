@@ -350,7 +350,17 @@ color: #2e2f42;
 
 
 
-
+.hero {
+    max-width: 320px;
+    margin: 0 auto;
+    background: #2e2f42;
+    text-align: center;
+    padding: 72px 0;
+    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/adaptiv/hero/Dark-bgmob@1x.jpg );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 
 @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -358,24 +368,7 @@ color: #2e2f42;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/adaptiv/hero/Dark-bgmob@2x.jpg);
     }
 }
-.hero {
-    max-width: 320px;
-    margin: 0 auto;
-    background: #2e2f42;
-    text-align: center;
-    padding: 72px 0;
-    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/adaptiv/hero/Dark-bgmob@1x.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-@media only screen and (min-width: 768px) {
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        .hero {
-            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/adaptiv/hero/Dark-bgtab@2x.jpg);
-        }
-    }
-}
+
 
 @media only screen and (min-width: 768px) {
     .hero {
@@ -388,13 +381,14 @@ color: #2e2f42;
     }
 }
 
-@media screen and (min-width: 1158px) {
+@media only screen and (min-width: 768px) {
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
         .hero {
-            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/adaptiv/hero/people-office1desk@2x.jpg);
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/adaptiv/hero/Dark-bgtab@2x.jpg);
         }
     }
 }
+
 @media screen and (min-width: 1158px) {
     .hero {
         max-width: 1440px;
@@ -404,6 +398,15 @@ color: #2e2f42;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+    }
+}
+
+
+@media screen and (min-width: 1158px) {
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/adaptiv/hero/people-office1desk@2x.jpg);
+        }
     }
 }
 
@@ -718,9 +721,9 @@ padding-bottom: 96px;
         }
 
 
-    .form{
+    /* .form{
         margin-left: 80px;
-    }
+    } */
 
         .containerpart{
             display: flex;
@@ -916,15 +919,17 @@ display: flex
 
    {
     .footer-container {
-        flex-wrap: nowrap;
-        align-items: baseline;
-        justify-content: center;
-        margin: 0 auto;
-        padding: 0 15px;
-        gap: 0;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: baseline;
+                gap: 0;
+            }
+        
     
-    }
+    
    }
+
 .footerinfo{
     display: flex;
         flex-wrap: wrap;
@@ -970,7 +975,29 @@ display: flex
     max-width: 264px;
 }
     }
+    .footerfooter{
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        
+    }
 
+    @media screen and (min-width: 768px)
+    {
+       .footerfooter {
+       display: block; 
+    }
+        }
+@media screen and (min-width: 1158px)
+    {
+       .footerfooter {
+        margin-right: 80px;
+    }
+        }
+        
+
+    
 
 .footer-logo {
     margin-bottom: 16px;
@@ -1021,18 +1048,11 @@ background-color: #31d0aa;
 .iconlinklink:focus {
     background-color: #31d0aa;
 }
-@media screen and (min-width: 1158px)
-{
-    .footermodal{
 
-        margin-left: 80px;
-        }
-    }
 
 
 .subscribe {
-    display: flex
-;
+    display: flex;
     justify-content: center;
     font-weight: 500;
     font-size: 16px;
@@ -1040,19 +1060,39 @@ background-color: #31d0aa;
     letter-spacing: 0.02em;
     color: #fff;
     margin-bottom: 16px;
-
-
-
 }
+
+
+
+
 .form-form {
-    display: flex
-;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 16px;
 
 }
+
+@media screen and (min-width: 768px)
+{
+  .form-form{
+    flex-direction: row;
+    gap: 24px;
+}
+.subscribe {
+    justify-content: flex-start;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+}
+
+
+
 
 
 .footerinput {
@@ -1092,16 +1132,17 @@ background-color: #31d0aa;
 }
 
     .backdrop {
+        width: 100%;
+        height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(46, 47, 66, 0.4);
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+        background-color: rgba(46, 47, 66, 0.4);
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
     
     
     }
@@ -1113,16 +1154,23 @@ background-color: #31d0aa;
     .modal {
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 49%;
         transform: translate(-50%, -50%);
-        width: 288px;
-            min-height: 623px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-        background-color: #fcfcfc;
         border-radius: 4px;
+        width: 288px;
+        min-height: 623px;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+        background-color: #fcfcfc;
+        padding: 72px 16px 24px 16px;
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        padding: 72px 24px 24px 24px;
     
+    }
+
+    @media only screen and (min-width: 768px) {
+        .modal {
+            width: 408px;
+            min-height: 584px;
+        }
     }
     .backdrop:not(.is-open) .modal {
     transform:translate(-50%, -50%), scale(1,5);
@@ -1164,6 +1212,7 @@ background-color: #31d0aa;
             margin-bottom: 16px;
     
     }
+    
     .formform{
     
     margin-bottom: 8px
@@ -1207,6 +1256,7 @@ background-color: #31d0aa;
     }
      
         .textarea {
+            width: 100%;
             height: 120px;
             font-size: 12px;
             line-height: 1.17;
@@ -1215,11 +1265,10 @@ background-color: #31d0aa;
             border: 1px solid rgba(46, 47, 66, 0.4);
             border-radius: 4px;
             background-color: transparent;
-            outline: transparent;
             padding: 8px 16px;
+            outline: transparent;
             resize: none;
             transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            width: 100%;
             
         }
         
