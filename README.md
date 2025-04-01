@@ -1,1 +1,2 @@
-# goit-markup-hw-01
+# Completed project
+goit-markup-hw-01
